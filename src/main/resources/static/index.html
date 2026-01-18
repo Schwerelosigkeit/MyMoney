@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> MyMoney </title>
+    <link rel="stylesheet" href="/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+</head>
+<body>
+
+<div class="container">
+
+    <button id="toggle-stats-btn" class="toggle-btn">Открыть статистику расходов за месяц</button>
+
+    <div class="right-section">
+        <h2 id="month-expenses-title"></h2>
+        <canvas id="expenses-chart" width="500" height="500"></canvas>
+        <div class="categories-summary">
+            <ul id="categories-column1"></ul>
+            <ul id="categories-column2"></ul>
+        </div>
+    </div>
+
+    <div class="left-section">
+        <div class="balance">Баланс: <span id="balance-value">0</span> руб.</div>
+        <div class="buttons">
+            <button class="btn btn-income" onclick="openModal('income')">Доход</button>
+            <button class="btn btn-expense" onclick="openModal('expense')">Расход</button>
+        </div>
+        <ul class="transactions-list" id="transactions-list"></ul>
+    </div>
+
+</div>
+
+<div id="transaction-modal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2 id="modal-title"></h2>
+        <div class="form-group">
+            <label for="amount">Сумма:</label>
+            <input type="number" id="amount" required min="0.01" step="0.01" pattern="^\d+(\.\d{1,2})?$">
+        </div>
+        <div class="form-group">
+            <label for="description">Комментарий (необязательно):</label>
+            <input type="text" id="description" pattern="^[а-яА-Яa-zA-Z0-9\s.,?!-]*$">
+        </div>
+        <div class="form-group" id="categories-group" style="display: none;">
+            <label>Категория:</label>
+            <div class="categories" id="categories-list"></div>
+        </div>
+        <button class="submit-btn" onclick="submitTransaction()">Внести</button>
+    </div>
+</div>
+
+<script src="/script.js"></script>
+</body>
+</html>
