@@ -257,6 +257,8 @@ body {
 #expenses-chart {
     display: block;
     margin: 0 auto;
+    width: 500px;
+    height: 500px;
 }
 
 #month-expenses-title {
@@ -294,8 +296,6 @@ body {
     color: #fff;
     font-weight: bold;
 }
-
-
 
 
 
@@ -348,4 +348,54 @@ body {
     .transaction-amount.expense {
         width: 100px;
     }
+}
+
+
+
+
+@media (max-width: 450px) {
+    .categories-summary {
+        flex-direction: column;
+        margin-left: 0;
+    }
+
+    .categories-summary ul {
+        width: 100%;
+        margin: 0;
+    }
+
+    .category-summary-item {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    #expenses-chart {
+        width: 250px;
+        height: 250px;
+    }
+
+    .container {
+        margin: 0;
+    }
+    .left-section {
+        border-radius: 0;
+    }
+    .right-section {
+        border-radius: 0;
+    }
+
+    .transaction-date {
+        display: none;
+    }
+    .delete-btn {
+        margin-left: 10px;
+        margin-right: 5px;
+    }
+    .buttons {
+        width: 300px;
+    }
+    .toggle-btn {
+        border-radius: 0;
+    }
+
 }

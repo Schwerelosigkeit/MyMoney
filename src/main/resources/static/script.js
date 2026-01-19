@@ -202,7 +202,8 @@ async function loadMonthExpenses() {
             }]
         },
         options: {
-            responsive: false,
+            responsive: true,
+            maintainAspectRatio: true,
             plugins: {
                 legend: {
                     display: false
@@ -278,4 +279,9 @@ window.onload = () => {
 
     document.getElementById('toggle-stats-btn').addEventListener('click', toggleStats);
 
+    window.addEventListener('resize', () => {
+        if (window.expensesChart) {
+            window.expensesChart.resize();
+        }
+    });
 };
