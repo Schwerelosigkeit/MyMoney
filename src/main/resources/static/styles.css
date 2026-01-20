@@ -310,7 +310,6 @@ body {
     cursor: pointer;
     font-size: 16px;
     font-weight: bold;
-    margin-right: 20px;
     margin-bottom: 20px;
     display: none;
 }
@@ -389,13 +388,25 @@ body {
     }
     .delete-btn {
         margin-left: 10px;
-        margin-right: 5px;
+        margin-right: 10px;
     }
     .buttons {
         width: 300px;
     }
     .toggle-btn {
         border-radius: 0;
+    }
+
+    .transaction-category {
+        font-size: 14px;
+        width: 100px;
+        height: 33px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .transaction-type {
+        font-size: 14px;
     }
 
 }
