@@ -268,6 +268,7 @@ function toggleStats() {
     } else {
         rightSection.style.display = 'block';
         toggleBtn.textContent = 'Скрыть расходы за текущий месяц';
+        loadMonthExpenses();
     }
 }
 
