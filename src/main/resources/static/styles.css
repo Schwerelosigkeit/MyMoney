@@ -316,6 +316,7 @@ body {
 
 
 @media (max-width: 1820px) {
+
     .container {
         flex-direction: column;
         width: 100%;
@@ -344,15 +345,22 @@ body {
     .transaction-amount.income {
         width: 100px;
     }
+
     .transaction-amount.expense {
         width: 100px;
     }
+
+    .transaction-date {
+        margin-left: 40px;
+    }
+
 }
 
 
 
 
 @media (max-width: 450px) {
+
     .categories-summary {
         flex-direction: column;
         margin-left: 0;
@@ -376,9 +384,11 @@ body {
     .container {
         margin: 0;
     }
+
     .left-section {
         border-radius: 0;
     }
+
     .right-section {
         border-radius: 0;
     }
@@ -386,13 +396,16 @@ body {
     .transaction-date {
         display: none;
     }
+
     .delete-btn {
         margin-left: 10px;
         margin-right: 10px;
     }
+
     .buttons {
         width: 300px;
     }
+
     .toggle-btn {
         border-radius: 0;
     }
@@ -405,6 +418,7 @@ body {
         align-items: center;
         justify-content: center;
     }
+
     .transaction-type {
         font-size: 14px;
     }

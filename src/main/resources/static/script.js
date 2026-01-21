@@ -118,6 +118,13 @@ async function submitTransaction() {
         amountInput.focus();
         return;
     }
+
+    if (amount > 1000000) {
+        alert('Сумма не должна превышать 1 000 000.');
+        amountInput.focus();
+        return;
+    }
+
     if (!/^\d+(\.\d{1,2})?$/.test(amountInput.value)) {
         alert('Сумма должна быть числом с максимум 2 знаками после запятой.');
         amountInput.focus();
