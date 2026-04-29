@@ -1,26 +1,27 @@
-package mymoney.entity;
+package mymoney.model;
 
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 public class Transaction {
 
     private Long id;
-    private double amount;
+    private BigDecimal amount;
     private TransactionType type;
-    private ExpenseCategories category;
+    private ExpenseCategory category;
     private LocalDateTime date;
     private String description;
 
     public Transaction(){}
 
-    public Transaction(double amount, TransactionType type, ExpenseCategories category, LocalDateTime date){
+    public Transaction(BigDecimal amount, TransactionType type, ExpenseCategory category, LocalDateTime date){
         this.amount = amount;
         this.type = type;
         this.category = category;
         this.date = date;
     }
 
-    public Transaction(double amount, TransactionType type, ExpenseCategories category, LocalDateTime date, String description){
+    public Transaction(BigDecimal amount, TransactionType type, ExpenseCategory category, LocalDateTime date, String description){
         this.amount = amount;
         this.description = description;
         this.type = type;
@@ -36,11 +37,11 @@ public class Transaction {
         this.id = id;
     }
 
-    public double getAmount() {
+    public BigDecimal getAmount() {
         return amount;
     }
 
-    public void setAmount(double amount) {
+    public void setAmount(BigDecimal amount) {
         this.amount = amount;
     }
 
@@ -60,11 +61,11 @@ public class Transaction {
         this.type = type;
     }
 
-    public ExpenseCategories getCategory() {
+    public ExpenseCategory getCategory() {
         return category;
     }
 
-    public void setCategory(ExpenseCategories category) {
+    public void setCategory(ExpenseCategory category) {
         this.category = category;
     }
 

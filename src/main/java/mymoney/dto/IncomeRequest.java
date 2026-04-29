@@ -1,15 +1,17 @@
 package mymoney.dto;
 
+import java.math.BigDecimal;
+
 public class IncomeRequest {
 
-    private double amount;
+    private BigDecimal amount;
     private String description;
 
-    public double getAmount() {
+    public BigDecimal getAmount() {
         return amount;
     }
 
-    public void setAmount(double amount) {
+    public void setAmount(BigDecimal amount) {
         this.amount = amount;
     }
 

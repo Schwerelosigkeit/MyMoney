@@ -1,12 +1,14 @@
 package mymoney.controller;
 
+import jakarta.validation.Valid;
 import mymoney.dto.*;
-import mymoney.entity.Transaction;
+import mymoney.model.Transaction;
 import mymoney.service.TransactionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 @RestController
@@ -17,7 +19,7 @@ public class TransactionController {
     private TransactionService service;
 
     @GetMapping("/balance")
-    public double getBalance(){
+    public BigDecimal getBalance(){
         return service.getBalance();
     }
 
@@ -27,13 +29,13 @@ public class TransactionController {
     }
 
     @PostMapping("/income")
-    public ResponseEntity<TransactionDTO> addIncome(@RequestBody IncomeRequest request){
+    public ResponseEntity<TransactionDTO> addIncome(@Valid @RequestBody IncomeRequest request){
         Transaction t = service.addIncome(request);
         return ResponseEntity.ok(service.toDTO(t));
     }
 
     @PostMapping("/expense")
-    public  ResponseEntity<TransactionDTO> addExpense(@RequestBody ExpenseRequest request){
+    public  ResponseEntity<TransactionDTO> addExpense(@Valid @RequestBody ExpenseRequest request){
         Transaction t = service.addExpense(request);
         return ResponseEntity.ok(service.toDTO(t));
     }

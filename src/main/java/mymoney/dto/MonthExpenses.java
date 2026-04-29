@@ -1,42 +1,43 @@
 package mymoney.dto;
 
-import mymoney.entity.ExpenseCategories;
+import mymoney.model.ExpenseCategory;
 
+import java.math.BigDecimal;
 import java.util.Map;
 
 public class MonthExpenses {
 
-    private double totalExpenses;
-    private Map<ExpenseCategories, Double> expensesByCategory;
-    private Map<ExpenseCategories, Double> percentages;
+    private BigDecimal totalExpenses;
+    private Map<ExpenseCategory, BigDecimal> expensesByCategory;
+    private Map<ExpenseCategory, BigDecimal> percentages;
 
-    public MonthExpenses(double totalExpenses, Map<ExpenseCategories, Double> expensesByCategory, Map<ExpenseCategories, Double> percentages) {
+    public MonthExpenses(BigDecimal totalExpenses, Map<ExpenseCategory, BigDecimal> expensesByCategory, Map<ExpenseCategory, BigDecimal> percentages) {
         this.totalExpenses = totalExpenses;
         this.expensesByCategory = expensesByCategory;
         this.percentages = percentages;
     }
 
-    public double getTotalExpenses() {
+    public BigDecimal getTotalExpenses() {
         return totalExpenses;
     }
 
-    public void setTotalExpenses(double totalExpenses) {
+    public void setTotalExpenses(BigDecimal totalExpenses) {
         this.totalExpenses = totalExpenses;
     }
 
-    public Map<ExpenseCategories, Double> getExpensesByCategory() {
+    public Map<ExpenseCategory, BigDecimal> getExpensesByCategory() {
         return expensesByCategory;
     }
 
-    public void setExpensesByCategory(Map<ExpenseCategories, Double> expensesByCategory) {
+    public void setExpensesByCategory(Map<ExpenseCategory, BigDecimal> expensesByCategory) {
         this.expensesByCategory = expensesByCategory;
     }
 
-    public Map<ExpenseCategories, Double> getPercentages() {
+    public Map<ExpenseCategory, BigDecimal> getPercentages() {
         return percentages;
     }
 
-    public void setPercentages(Map<ExpenseCategories, Double> percentages) {
+    public void setPercentages(Map<ExpenseCategory, BigDecimal> percentages) {
         this.percentages = percentages;
     }
 

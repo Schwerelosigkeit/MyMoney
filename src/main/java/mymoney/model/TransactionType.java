@@ -1,4 +1,4 @@
-package mymoney.entity;
+package mymoney.model;
 
 public enum TransactionType {
 

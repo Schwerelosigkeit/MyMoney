@@ -1,11 +1,12 @@
 package mymoney.dto;
 
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 public class TransactionDTO {
 
     private Long id;
-    private double amount;
+    private BigDecimal amount;
     private String type;
     private String category;
     private String color;
@@ -13,7 +14,7 @@ public class TransactionDTO {
     private String description;
 
 
-    public TransactionDTO(Long id, double amount, String type, String category, String color, LocalDateTime date, String description) {
+    public TransactionDTO(Long id, BigDecimal amount, String type, String category, String color, LocalDateTime date, String description) {
         this.id = id;
         this.amount = amount;
         this.type = type;
@@ -31,11 +32,11 @@ public class TransactionDTO {
         this.id = id;
     }
 
-    public double getAmount() {
+    public BigDecimal getAmount() {
         return amount;
     }
 
-    public void setAmount(double amount) {
+    public void setAmount(BigDecimal amount) {
         this.amount = amount;
     }
 

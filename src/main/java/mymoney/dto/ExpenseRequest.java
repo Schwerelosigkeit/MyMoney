@@ -1,8 +1,10 @@
 package mymoney.dto;
 
+import java.math.BigDecimal;
+
 public class ExpenseRequest {
 
-    private double amount;
+    private BigDecimal amount;
     private String category;
     private String description;
 
@@ -22,11 +24,11 @@ public class ExpenseRequest {
         this.category = category;
     }
 
-    public double getAmount() {
+    public BigDecimal getAmount() {
         return amount;
     }
 
-    public void setAmount(double amount) {
+    public void setAmount(BigDecimal amount) {
         this.amount = amount;
     }
 

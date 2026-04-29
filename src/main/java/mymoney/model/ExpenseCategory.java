@@ -1,6 +1,6 @@
-package mymoney.entity;
+package mymoney.model;
 
-public enum ExpenseCategories {
+public enum ExpenseCategory {
 
     FOODSTUFF("Продукты", "#D45C6B"),
     TRANSPORT("Транспорт", "#64187f"),
@@ -16,7 +16,7 @@ public enum ExpenseCategories {
     private final String name;
     private final String color;
 
-    ExpenseCategories(String name, String color){
+    ExpenseCategory(String name, String color){
         this.name = name;
         this.color = color;
     }
