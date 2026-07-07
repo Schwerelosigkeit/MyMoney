@@ -20,7 +20,6 @@ public class MonthExpenses {
     public BigDecimal getTotalExpenses() {
         return totalExpenses;
     }
-
     public void setTotalExpenses(BigDecimal totalExpenses) {
         this.totalExpenses = totalExpenses;
     }
@@ -28,7 +27,6 @@ public class MonthExpenses {
     public Map<ExpenseCategory, BigDecimal> getExpensesByCategory() {
         return expensesByCategory;
     }
-
     public void setExpensesByCategory(Map<ExpenseCategory, BigDecimal> expensesByCategory) {
         this.expensesByCategory = expensesByCategory;
     }
@@ -36,7 +34,6 @@ public class MonthExpenses {
     public Map<ExpenseCategory, BigDecimal> getPercentages() {
         return percentages;
     }
-
     public void setPercentages(Map<ExpenseCategory, BigDecimal> percentages) {
         this.percentages = percentages;
     }

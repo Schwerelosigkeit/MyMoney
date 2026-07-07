@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.*;
 
 import java.math.BigDecimal;
 import java.util.List;
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
+import java.net.URI;
 
 @RestController
 @RequestMapping("/api")
@@ -31,13 +33,31 @@ public class TransactionController {
     @PostMapping("/income")
     public ResponseEntity<TransactionDTO> addIncome(@Valid @RequestBody IncomeRequest request){
         Transaction t = service.addIncome(request);
-        return ResponseEntity.ok(service.toDTO(t));
+        TransactionDTO dto = service.toDTO(t);
+
+        URI location = ServletUriComponentsBuilder
+                .fromCurrentRequest()
+                .path("/{id}")
+                .buildAndExpand(t.getId())
+                .toUri();
+
+        return ResponseEntity.created(location)
+                .body(dto);
     }
 
     @PostMapping("/expense")
-    public  ResponseEntity<TransactionDTO> addExpense(@Valid @RequestBody ExpenseRequest request){
+    public ResponseEntity<TransactionDTO> addExpense(@Valid @RequestBody ExpenseRequest request){
         Transaction t = service.addExpense(request);
-        return ResponseEntity.ok(service.toDTO(t));
+        TransactionDTO dto = service.toDTO(t);
+
+        URI location = ServletUriComponentsBuilder
+                .fromCurrentRequest()
+                .path("/{id}")
+                .buildAndExpand(t.getId())
+                .toUri();
+
+        return ResponseEntity.created(location)
+                .body(dto);
     }
 
     @DeleteMapping("/transactions/{id}")

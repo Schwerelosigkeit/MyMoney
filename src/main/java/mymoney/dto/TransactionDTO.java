@@ -13,7 +13,6 @@ public class TransactionDTO {
     private LocalDateTime date;
     private String description;
 
-
     public TransactionDTO(Long id, BigDecimal amount, String type, String category, String color, LocalDateTime date, String description) {
         this.id = id;
         this.amount = amount;
@@ -24,60 +23,25 @@ public class TransactionDTO {
         this.description = description;
     }
 
-    public Long getId(){
-        return id;
-    }
+    public Long getId(){ return id; }
+    public void setId(Long id){ this.id = id; }
 
-    public void setId(Long id){
-        this.id = id;
-    }
+    public BigDecimal getAmount() { return amount; }
+    public void setAmount(BigDecimal amount) { this.amount = amount; }
 
-    public BigDecimal getAmount() {
-        return amount;
-    }
+    public String getType() { return type; }
+    public void setType(String type) { this.type = type; }
 
-    public void setAmount(BigDecimal amount) {
-        this.amount = amount;
-    }
+    public String getCategory() { return category; }
+    public void setCategory(String category) { this.category = category; }
 
-    public String getDescription() {
-        return description;
-    }
+    public String getColor() { return color; }
+    public void setColor(String color) { this.color = color; }
 
-    public void setDescription(String description) {
-        this.description = description;
-    }
+    public LocalDateTime getDate() { return date; }
+    public void setDate(LocalDateTime date) { this.date = date;}
 
-    public String getType() {
-        return type;
-    }
-
-    public void setType(String type) {
-        this.type = type;
-    }
-
-    public String getCategory() {
-        return category;
-    }
-
-    public void setCategory(String category) {
-        this.category = category;
-    }
-
-    public String getColor() {
-        return color;
-    }
-
-    public void setColor(String color) {
-        this.color = color;
-    }
-
-    public LocalDateTime getDate() {
-        return date;
-    }
-
-    public void setDate(LocalDateTime date) {
-        this.date = date;
-    }
+    public String getDescription() { return description; }
+    public void setDescription(String description) { this.description = description; }
 
 }

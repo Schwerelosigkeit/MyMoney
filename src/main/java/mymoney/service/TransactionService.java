@@ -22,6 +22,7 @@ public class TransactionService {
     private static final AtomicLong idGenerator = new AtomicLong(1);
 
     private static final BigDecimal MAX_AMOUNT = new BigDecimal("1000000.00");
+    private static final int MAX_DESCRIPTION_LENGTH = 500;
     private static final Pattern DESCRIPTION_PATTERN =
             Pattern.compile("^[a-zA-Zа-яА-Я0-9\\s.,?!-]*$");
 
@@ -170,6 +171,14 @@ public class TransactionService {
         }
 
         String trimmed = description.trim();
+
+        // пока только это добавила, нужно проверку postman
+        if (trimmed.length() > MAX_DESCRIPTION_LENGTH) {
+            throw new IllegalArgumentException(
+                    "Comment must not exceed 500 characters."
+            );
+        }
+
         if (!DESCRIPTION_PATTERN.matcher(trimmed).matches()) {
             throw new IllegalArgumentException(
                     "Comment may only contain letters, numbers, spaces, and basic punctuation (,.?!-)."

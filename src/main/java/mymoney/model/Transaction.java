@@ -32,7 +32,6 @@ public class Transaction {
     public Long getId() {
         return id;
     }
-
     public void setId(Long id) {
         this.id = id;
     }
@@ -40,7 +39,6 @@ public class Transaction {
     public BigDecimal getAmount() {
         return amount;
     }
-
     public void setAmount(BigDecimal amount) {
         this.amount = amount;
     }
@@ -48,7 +46,6 @@ public class Transaction {
     public String getDescription() {
         return description;
     }
-
     public void setDescription(String description) {
         this.description = description;
     }
@@ -56,7 +53,6 @@ public class Transaction {
     public TransactionType getType() {
         return type;
     }
-
     public void setType(TransactionType type) {
         this.type = type;
     }
@@ -64,7 +60,6 @@ public class Transaction {
     public ExpenseCategory getCategory() {
         return category;
     }
-
     public void setCategory(ExpenseCategory category) {
         this.category = category;
     }
@@ -72,7 +67,6 @@ public class Transaction {
     public LocalDateTime getDate() {
         return date;
     }
-
     public void setDate(LocalDateTime date) {
         this.date = date;
     }

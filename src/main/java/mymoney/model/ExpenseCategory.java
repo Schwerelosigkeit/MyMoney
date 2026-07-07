@@ -4,7 +4,7 @@ public enum ExpenseCategory {
 
     FOODSTUFF("Продукты", "#D45C6B"),
     TRANSPORT("Транспорт", "#64187f"),
-    RESTAURANTS("Кафе и рестораны", "#C9899E"),
+    RESTAURANTS("Кафе и рестораны", "#DB6B91"),
     ENTERTAINMENT("Развлечения", "#C67BF5"),
     HOUSE("Товары для дома", "#5C7298"),
     UTILITIES("Коммуналка", "#8B5F9E"),
